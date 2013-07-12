@@ -25,6 +25,12 @@ def drawTriangle(size, fill):
         turtle.right(120)
     turtle.fill(False)
 
+def drawPolygon(size, fill, n):
+    turtle.fill(fill)
+    for i in range(n):
+        turtle.fd(size)
+        turtle.right(360.0 / n)
+    turtle.fill(False)
 
 ### Functions that draw fractals.
 
