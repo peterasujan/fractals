@@ -1,0 +1,5 @@
+t.up()
+t.goto(-200, 180)
+t.down()
+t.speed(0)
+hexaflake(250, 4, True)
