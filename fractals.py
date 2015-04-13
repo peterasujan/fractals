@@ -1,5 +1,5 @@
 
-from turtle import fd, bk, right, left, up, down, reset
+from turtle import fd, bk, right, left, up, down
 import turtle as t
 import math
 
@@ -9,27 +9,34 @@ import math
 
 ### Various utility methods
 
+def reset():
+    old_speed = t.speed()
+    t.reset()
+    t.speed(old_speed)
+
+def setFill(fill):
+    t.fill(fill)
 
 def drawSquare(size, fill):
-    t.fill(fill)
+    setFill(fill)
     for i in range(4):
         fd(size)
         right(90)
-    t.fill(False)
+    setFill(False)
 
 def drawTriangle(size, fill):
-    t.fill(fill)
+    setFill(fill)
     for i in range(3):
         fd(size)
         right(120)
-    t.fill(False)
+    setFill(False)
 
 def drawPolygon(size, fill, n):
-    t.fill(fill)
+    setFill(fill)
     for i in range(n):
         fd(size)
         right(360.0 / n)
-    t.fill(False)
+    setFill(False)
 
 ### Functions that draw fractals.
 
